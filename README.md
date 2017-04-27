@@ -10,20 +10,17 @@ Simple WebSocket Server written in Python that supports multiple WebSocket conne
 
 # How Does It Work?
 
-- A socketserver is initialized and listens for client connections.
-- When a client connects ThreadingMixIn starts a threaded handler for the connection.
-- Every client connecting has to perform a handshake with the server to ensure that a proper WebSocket connection is made.
-- After the handshake is completed the server and client can send masked messages to eachother until the connection is closed.
+A socketserver is initialized and listens for client connections. When a client connects ThreadingMixIn starts a threaded handler for the connection. Every client connecting has to perform a handshake with the server to ensure that a proper WebSocket connection is made. After the handshake is completed the server and client can send masked messages to eachother until the connection is closed.
 
 # Starting the Server:
 
-Make sure 'wss.py' and 'server.py' are in the same folder.
+Make sure `wss.py` and `server.py` are in the same folder.
 
-Edit 'server.py' to your preferences.
+Edit `server.py` to your preferences.
 
-In the command line run 'python server.py' and the server will start.
+In the command line run `python server.py` and the server will start.
 
-To shut down the server use 'Ctrl+C'.
+To shut down the server use `Ctrl+C`.
 
 # TODO:
 

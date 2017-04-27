@@ -30,8 +30,8 @@ An example is provided in example_client.html and example_client.js. The example
 - Cleanup of code
 
 # References:
-[socketserver examples](https://docs.python.org/3.4/library/socketserver.html/)
+[socketserver examples](https://docs.python.org/3.4/library/socketserver.html)
 
-[socketserver source code](https://hg.python.org/cpython/file/3.4/Lib/socketserver.py/)
+[socketserver source code](https://hg.python.org/cpython/file/3.4/Lib/socketserver.py)
 
 [RFC for WebSocket Protocol](https://tools.ietf.org/html/rfc6455)

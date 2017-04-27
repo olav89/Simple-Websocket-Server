@@ -18,10 +18,12 @@ Simple WebSocket Server written in Python.
 # TODO:
 
 - Log server activity to a file
-- Cleanup of code 
+- Cleanup of code
 
 # References:
 
 https://hg.python.org/cpython/file/3.4/Lib/socketserver.py (Source code for socketserver)
+
 https://docs.python.org/3.4/library/socketserver.html (Code examples for using socketserver)
+
 https://tools.ietf.org/html/rfc6455 (The WebSocket Protocol)

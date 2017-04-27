@@ -1,6 +1,6 @@
 # Simple-WebSocket-Server
 
-Simple WebSocket Server written in Python.
+Simple WebSocket Server written in Python that supports multiple WebSocket connections. All messages sent to the server is in turn sent to the connected clients.
 
 # Requirements:
 
@@ -15,15 +15,24 @@ Simple WebSocket Server written in Python.
 - Every client connecting has to perform a handshake with the server to ensure that a proper WebSocket connection is made.
 - After the handshake is completed the server and client can send masked messages to eachother until the connection is closed.
 
+# Starting the Server:
+
+Make sure 'wss.py' and 'server.py' are in the same folder.
+
+Edit 'server.py' to your preferences.
+
+In the command line run 'python server.py' and the server will start.
+
+To shut down the server use 'Ctrl+C'.
+
 # TODO:
 
 - Log server activity to a file
 - Cleanup of code
 
 # References:
+[socketserver examples](https://docs.python.org/3.4/library/socketserver.html/)
 
-https://hg.python.org/cpython/file/3.4/Lib/socketserver.py (Source code for socketserver)
+[socketserver source code](https://hg.python.org/cpython/file/3.4/Lib/socketserver.py/)
 
-https://docs.python.org/3.4/library/socketserver.html (Code examples for using socketserver)
-
-https://tools.ietf.org/html/rfc6455 (The WebSocket Protocol)
+[RFC for WebSocket Protocol](https://tools.ietf.org/html/rfc6455)

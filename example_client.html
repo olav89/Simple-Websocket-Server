@@ -1,0 +1,37 @@
+<!-- example based on work assignment given by https://github.com/eidheim -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="./example_client.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="connection_label">
+      Connecting...
+    </div>
+    <form onsubmit="return false">
+      Name:
+      <input type="text" id="chatname"/>
+      Color:
+      <select id="chatcolor">
+        <option value="white">Default</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+      </select>
+      <br/>
+      <br/>
+      <hr/>
+
+      Message:
+      <input type="text" id="chatcontent"/>
+
+      <input type="submit" id="submitchat" value="Send"/>
+    </form>
+    <div id="chatcontainer">
+      <p id="chat" style="border:1px solid; background-color:black">
+      </p>
+    </div>
+  </body>
+</html>

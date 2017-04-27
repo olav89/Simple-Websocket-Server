@@ -22,6 +22,8 @@ In the command line run `python server.py` and the server will start.
 
 To shut down the server use `Ctrl+C`.
 
+An example is provided in example_client.html and example_client.js. The example is based on a work assignment given at [websocket-example](https://github.com/ntnu-tdat2004/websocket-example)
+
 # TODO:
 
 - Log server activity to a file

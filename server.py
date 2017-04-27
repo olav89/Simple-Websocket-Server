@@ -1,4 +1,4 @@
 from wss import WebSocketServer
 
-server = WebSocketServer(9001, 'localhost')
+server = WebSocketServer(8080, 'localhost')
 server.listen_forever()

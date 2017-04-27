@@ -26,7 +26,7 @@ from socketserver import ThreadingMixIn, TCPServer, StreamRequestHandler
 #+---------------------------------------------------------------+
 
 # headers
-# support only payload len < 127!!!
+# support only payload len < 126!!!
 # 8 bits for fin-opcode
 # 8 bits for mask and payload len
 

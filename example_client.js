@@ -2,7 +2,7 @@
 class Chat {
   constructor(context) {
     this.context=context;
-    this.text = "";
+    this.text = "<b>Chat log:</b>";
 
     this.ws = new WebSocket("ws://localhost:8080");
 
@@ -28,7 +28,7 @@ class Chat {
   }
 
   add_text(t) {
-    this.text = t + "\n" + this.text;
+    this.text = this.text + '<br/>' + t;
     $('#chat').html(this.text);
   };
 
@@ -54,10 +54,9 @@ $(document).ready(function(){
       name = "Anonymous";
     }
     var content = $('#chatcontent').val();
-    var color = $('#chatcolor').val();
     var dt = new Date();
     var time = "[" + dt.getHours() + ":" + dt.getMinutes() + "]";
-    chat.on_text_submit("<div style='color:" + color + "'>" + time + name + ": " + content + "<div>");
+    chat.on_text_submit(time + name + ": " + content);
     $('#chatcontent').val("");
   });
 

@@ -60,4 +60,8 @@ $(document).ready(function(){
     chat.on_text_submit("<div style='color:" + color + "'>" + time + name + ": " + content + "<div>");
     $('#chatcontent').val("");
   });
+
+  $( "#closechat" ).click(function() {
+    chat.ws.close();
+  });
 });

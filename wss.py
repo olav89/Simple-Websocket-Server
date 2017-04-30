@@ -98,7 +98,7 @@ class WebSocketHandler(StreamRequestHandler):
         fin = h1 & 0x80 # 0x80 = 1000 0000
         opcode = h1 & 0x0f # 0x0f = 0000 1111
         masked = h2 & 0x80 # 0x80 = 1000 0000
-        message_len = h2 & 0x7f # 0x7f = 0111 1111
+        payload_len = h2 & 0x7f # 0x7f = 0111 1111
 
         if not h1: # could not read
             print('Connection was closed.')
@@ -115,12 +115,12 @@ class WebSocketHandler(StreamRequestHandler):
             print('Message was not masked.')
             return
         elif opcode == OPCODE_TEXT:
-            if message_len > 125: # only short messages supported
+            if payload_len > 125: # only short messages supported
                 print('Message was too long.')
                 return
 
             masking = self.rfile.read(4) # read the masks
-            payload = self.rfile.read(message_len) # read the payload
+            payload = self.rfile.read(payload_len) # read the payload
 
             message = ""; # decoded message
             i = 0;
@@ -149,7 +149,7 @@ class WebSocketHandler(StreamRequestHandler):
         self.wfile.write(header + payload)
 
 # The server
-class WebSocketServer(ThreadingMixIn, TCPServer):
+class WebSocketServer(ThreadingMixIn, TCPServer): # removing ThreadingMixIn from this line means you can only have 1 client
     allow_reuse_address = True # can use same address
     daemon_threads = True # exit even when threads are running
 

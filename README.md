@@ -10,7 +10,7 @@ Simple WebSocket Server written in Python that supports multiple WebSocket conne
 
 # How Does It Work?
 
-A socketserver is initialized and listens for client connections. When a client connects ThreadingMixIn starts a threaded handler for the connection. Every client connecting has to perform a handshake with the server to ensure that a proper WebSocket connection is made. After the handshake is completed the server and client can send masked messages to eachother until the connection is closed.
+A socketserver is initialized and listens for client connections. When a client connects ThreadingMixIn starts a handler for the connection. Every client connecting has to perform a handshake with the server to ensure that a proper WebSocket connection is made. After the handshake is completed the server and client can send masked messages to eachother until the connection is closed.
 
 # Running the Server:
 
@@ -26,9 +26,7 @@ An example is provided in example_client.html and example_client.js. The example
 
 # TODO:
 
-- Log server activity to a file
-- Implement support for longer messages
-- Implement support for ping and pong
+- Implement other op-codes and longer messages
 - Make the server more customizable (logging, print, requirements)
 
 # References:

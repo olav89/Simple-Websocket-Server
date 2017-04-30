@@ -170,11 +170,10 @@ class WebSocketServer(ThreadingMixIn, TCPServer):
         except Exception as e: # Error occured
             self.server_close()
             print(str(e))
-            exit(1)
 
     def new_client(self, handler):
         self.counter += 1
-        client = {
+        client = { # save id for prints and handler to send messages
             'id': self.counter,
             'handler': handler
         }
